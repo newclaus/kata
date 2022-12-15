@@ -9,7 +9,7 @@ public class HashiGameTest
 {
     [Theory]
     [DataSet]
-    public void TestGutterGame(bool expectedResult, TestPuzzle puzzle)
+    public void TestGutterGame(bool expectedResult, Puzzle puzzle)
     {
         var game = new HashiGame(puzzle);
 
@@ -143,7 +143,7 @@ public class HashiGameTest
                 return this;
             }
             
-            public TestPuzzle BuildPuzzle()
+            public Puzzle BuildPuzzle()
             {
                 return _puzzle;
             }
