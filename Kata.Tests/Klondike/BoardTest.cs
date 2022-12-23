@@ -35,4 +35,16 @@ public class BoardTest
         Assert.Equal(4, _board.FoundationPiles.Count);
         Assert.All(_board.FoundationPiles, pair => Assert.Equal(pair.Key, pair.Value.Suit));
     }
+    
+    [Fact]
+    public void TestHasMoves()
+    {
+        Assert.True(_board.HasMoves());
+    }
+
+    /*[Fact]
+    public void TestNoMoves()
+    {
+        Assert.False(_game.HasMoves());
+    }*/
 }

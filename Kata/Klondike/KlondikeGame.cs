@@ -2,7 +2,7 @@ namespace Kata.Klondike;
 
 public class KlondikeGame
 {
-    private Board _board;
+    public Board Board { get; private set; }
 
     public Status Status { get; private set; } = Status.New;
 
@@ -13,13 +13,8 @@ public class KlondikeGame
 
     public void StartNew(Board board)
     {
-        _board = board;
+        Board = board;
         Status = Status.Playing;
-    }
-
-    public bool HasMoves()
-    {
-        return true;
     }
 }
 

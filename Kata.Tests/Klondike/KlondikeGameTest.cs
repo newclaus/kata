@@ -24,20 +24,4 @@ public class KlondikeGameTest
 
         Assert.Equal(Status.Playing, _game.Status);
     }
-
-    [Fact]
-    public void TestHasMoves()
-    {
-        _game.StartNew();
-
-        Assert.True(_game.HasMoves());
-    }
-
-    /*[Fact]
-    public void TestNoMoves()
-    {
-        _game.StartNew(new Board());
-        
-        Assert.False(_game.HasMoves());
-    }*/
 }

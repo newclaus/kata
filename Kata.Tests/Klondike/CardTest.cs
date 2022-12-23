@@ -1,6 +1,4 @@
-using System.Reflection;
 using Kata.Klondike;
-using Xunit.Sdk;
 
 namespace Kata.Tests.Klondike;
 

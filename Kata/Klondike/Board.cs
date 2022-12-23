@@ -15,13 +15,23 @@ public class Board
     
     public IReadOnlyDictionary<Suit, FoundationPile> FoundationPiles { get; init; } = null!;
 
+    public bool HasMoves()
+    {
+        return true;
+    }
+
     public static Board CreateNew()
     {
         using var deck = Deck.Create();
 
+        return CreateNew(deck);
+    }
+
+    private static Board CreateNew(Deck deck)
+    {
         var foundationPiles = Enum.GetValues<Suit>()
             .ToDictionary(suit => suit, suit => new FoundationPile(suit));
-        
+
         return new Board
         {
             Tableau = CreateTableau(deck),
